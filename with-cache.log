@@ -1,0 +1,1031 @@
+#1 [cypress internal] load build definition from Dockerfile
+#1 sha256:bc0281247bfa8074c9ea9df55f2c401c6e2cbb57536bac3e5cb01197a1bba61c
+#1 transferring dockerfile: 8.74kB 0.0s done
+#1 DONE 0.0s
+
+#2 [apollo-service-push internal] load build definition from Dockerfile
+#2 sha256:c6a722e042519e294c19247643b4794047a60d0c84bca01e0862af61a0661381
+#2 transferring dockerfile: 8.74kB done
+#2 DONE 0.0s
+
+#4 [production internal] load build definition from Dockerfile
+#4 sha256:abe2c27261c39bb2801cb51684fb1a09d29eb955b9e3748bf7b86edd22cd17b1
+#4 transferring dockerfile: 8.74kB done
+#4 DONE 0.0s
+
+#3 [upload-assets internal] load build definition from Dockerfile
+#3 sha256:803acb0a26b6226b313c32f24991fbb1b6a41c17d76074af1a2f8c9f70dd7e4a
+#3 transferring dockerfile: 8.74kB done
+#3 DONE 0.0s
+
+#5 [upload-elastic-beanstalk-application-version internal] load build definition from Dockerfile
+#5 sha256:68532f93e6999e9c75b46dc5cd0b7ec3d9d553766b0799b68cbe9577b47d5443
+#5 transferring dockerfile: 8.74kB done
+#5 DONE 0.0s
+
+#6 [e2e-test-server internal] load build definition from Dockerfile
+#6 sha256:8d7a7d0e120cd581cccf5e09b46a19e4265b58232cdb964b97187a9050ae3fb0
+#6 transferring dockerfile: 8.74kB done
+#6 DONE 0.0s
+
+#7 [test internal] load build definition from Dockerfile
+#7 sha256:4a0bc81e4e8ca1d749965d720ea4f930f0c3d08180292d8f59ff7e557d382a03
+#7 transferring dockerfile: 8.74kB done
+#7 DONE 0.0s
+
+#8 [cypress internal] load .dockerignore
+#8 sha256:f5105204b965bc68a69c027a65407dab256584830f7a21aff0a8e378586ea94d
+#8 transferring context: 984B 0.0s done
+#8 DONE 0.0s
+
+#9 [apollo-service-push internal] load .dockerignore
+#9 sha256:86c20fe095e5ca59769705076d8c9fc3e27c9767eb745cfc451399d5d6d79fb0
+#9 transferring context: 984B done
+#9 DONE 0.0s
+
+#10 [upload-assets internal] load .dockerignore
+#10 sha256:fb46a4cce6fb7d0cb48a5a05abf30f0878275f06a3ac672cc2b8b3adc0ff8a80
+#10 transferring context: 984B done
+#10 DONE 0.0s
+
+#11 [production internal] load .dockerignore
+#11 sha256:9c617c03586b04d987c81e96a0daf6e9a6634ff497422a34200ae596a4206978
+#11 transferring context: 984B done
+#11 DONE 0.0s
+
+#13 [e2e-test-server internal] load .dockerignore
+#13 sha256:35d4271a9bfe17f88efc20199c4a0507743101e010f761e1d87f568febb37fef
+#13 transferring context: 984B done
+#13 DONE 0.0s
+
+#12 [upload-elastic-beanstalk-application-version internal] load .dockerignore
+#12 sha256:df39e4f54c0f0dda8c5f39407b0c4c126903fa43f3c4ba3dacb0b919e3a18e8f
+#12 transferring context: 984B done
+#12 DONE 0.0s
+
+#14 [test internal] load .dockerignore
+#14 sha256:cfa0b8d857b7249010107de61cf6ffab4460690b5b72588bb3779fa40d6b6844
+#14 transferring context: 984B done
+#14 DONE 0.0s
+
+#15 [cypress] resolve image config for docker.io/docker/dockerfile:1.2
+#15 sha256:b239a20f31d7f1e5744984df3d652780f1a82c37554dd73e1ad47c8eb05b0d69
+#15 ...
+
+#16 [auth] docker/dockerfile:pull token for registry-1.docker.io
+#16 sha256:7e3fcd77250876909a3a841a09a74cb4d4340284f76a79af05dfde43876488fc
+#16 DONE 0.0s
+
+#15 [test] resolve image config for docker.io/docker/dockerfile:1.2
+#15 sha256:b239a20f31d7f1e5744984df3d652780f1a82c37554dd73e1ad47c8eb05b0d69
+#15 DONE 1.2s
+
+#15 [upload-assets] resolve image config for docker.io/docker/dockerfile:1.2
+#15 sha256:b239a20f31d7f1e5744984df3d652780f1a82c37554dd73e1ad47c8eb05b0d69
+#15 DONE 1.3s
+
+#17 [apollo-service-push] docker-image://docker.io/docker/dockerfile:1.2@sha256:e2a8561e419ab1ba6b2fe6cbdf49fd92b95912df1cf7d313c3e2230a333fdbcc
+#17 sha256:37e0c519b0431ef5446f4dd0a4588ba695f961e9b0e800cd8c7f5ba6165af727
+#17 resolve docker.io/docker/dockerfile:1.2@sha256:e2a8561e419ab1ba6b2fe6cbdf49fd92b95912df1cf7d313c3e2230a333fdbcc 0.0s done
+#17 CACHED
+
+#20 [upload-assets internal] load metadata for docker.io/library/ruby:2.6.6-alpine3.13
+#20 sha256:1a8975533c05ac843c58bcd2a5a8dbd0f63acb3f745a7db154e6ac3fd585f5fc
+#20 ...
+
+#24 [auth] library/node:pull token for registry-1.docker.io
+#24 sha256:5f56bfd7606c61376108d5faa961d040951ed13d4b994b5714d1f68a05f82fad
+#24 DONE 0.0s
+
+#20 [apollo-service-push internal] load metadata for docker.io/library/ruby:2.6.6-alpine3.13
+#20 sha256:1a8975533c05ac843c58bcd2a5a8dbd0f63acb3f745a7db154e6ac3fd585f5fc
+#20 ...
+
+#19 [production internal] load metadata for 012345678901.dkr.ecr.eu-west-1.amazonaws.com/envoy-preflight:62fdf4a226f42b7874bf1d037de9993e7fe1d916
+#19 sha256:9a6594815befe08909517c55e0c69074f82051ac7e17e417104e97aef61237d9
+#19 DONE 0.4s
+
+#25 [apollo-service-push internal] load metadata for 012345678901.dkr.ecr.eu-west-1.amazonaws.com/apollo-service-push:acaf3bf5b78961b558381c973aa81bbe8a3e8b48
+#25 sha256:553ceaa3c95e955f4b3f83fa442fb679d579435b75e4f4920e9b79ab9f76306c
+#25 DONE 0.2s
+
+#26 [auth] sharing credentials for 012345678901.dkr.ecr.eu-west-1.amazonaws.com
+#26 sha256:cefaa179d03b13047f37ef4f75d5fe65fac6d65736969f92a391c39e5ac8b6aa
+#26 DONE 0.0s
+
+#28 [auth] sharing credentials for 012345678901.dkr.ecr.eu-west-1.amazonaws.com
+#28 sha256:e3b02d125b3529222c154076b95c94465ca9a5b999f7ac68c9ac56b36726d11d
+#28 DONE 0.0s
+
+#27 [auth] sharing credentials for 012345678901.dkr.ecr.eu-west-1.amazonaws.com
+#27 sha256:5c46507d77b7072138f6c90ab03d2c0dfe2329788671ccd985443dc1b59c71ab
+#27 DONE 0.0s
+
+#29 [auth] library/ruby:pull token for registry-1.docker.io
+#29 sha256:46bb2a3a87e158ad2228c55f7cc6f366dd2d347574068cf7cf0449f076fb7ea8
+#29 DONE 0.0s
+
+#22 [upload-elastic-beanstalk-application-version internal] load metadata for 012345678901.dkr.ecr.eu-west-1.amazonaws.com/zenploy:1.0.26-aws
+#22 sha256:44fb19546d00ecc0fc29ada5df48efd68ec09909f4f00102f906e9ef658857a1
+#22 DONE 0.4s
+
+#30 [auth] amazon/aws-cli:pull token for registry-1.docker.io
+#30 sha256:fd2a05004f83d642a7cff83210f50c91103369376f928b761bb92292f2ff780e
+#30 DONE 0.0s
+
+#18 [apollo-service-push internal] load metadata for docker.io/library/node:14.16.0-alpine3.13
+#18 sha256:ba7d440b5a76f061b68b0489ee0dbdce66687edcb25d326b0dbf662af28f330e
+#18 DONE 0.4s
+
+#23 [cypress internal] load metadata for docker.io/library/node:14.16.0-buster-slim
+#23 sha256:dbb778bf6bdcbefcec1ef6b2154b41b95c1c00370e84c181f4b804e060472838
+#23 DONE 0.4s
+
+#21 [upload-assets internal] load metadata for docker.io/amazon/aws-cli:2.0.38
+#21 sha256:a8ea630a07ea7a44d889cfd19a5b8964b59d36360282df20f4dbd18aad6303ff
+#21 ...
+
+#20 [production internal] load metadata for docker.io/library/ruby:2.6.6-alpine3.13
+#20 sha256:1a8975533c05ac843c58bcd2a5a8dbd0f63acb3f745a7db154e6ac3fd585f5fc
+#20 DONE 0.6s
+
+#47 [production internal] load build context
+#47 sha256:17fa8e0fcd8e97024be4ef36e3a1442d4bfc78ea846497626774ed21b220888e
+#47 DONE 0.0s
+
+#108 [upload-elastic-beanstalk-application-version internal] load build context
+#108 sha256:a5f48f58b37ebfc437c8c52461d268592e3904f09218dc7abc065a823dbd284a
+#108 DONE 0.0s
+
+#132 [apollo-service-push internal] load build context
+#132 sha256:0527417afedfaafb68db8fa7f21768f27f9a3d2fde79aa85714a4d99566c4ef4
+#132 DONE 0.0s
+
+#39 [cypress cypress 1/8] FROM docker.io/library/node:14.16.0-buster-slim@sha256:ffc15488e56d99dbc9b90d496aaf47901c6a940c077bc542f675ae351e769a12
+#39 sha256:86e3f1848eb3ce3f99069e78ecbbed5fd53c86a4fb79bdcc6dad337914d6991e
+#39 resolve docker.io/library/node:14.16.0-buster-slim@sha256:ffc15488e56d99dbc9b90d496aaf47901c6a940c077bc542f675ae351e769a12 0.1s done
+#39 DONE 0.1s
+
+#40 [e2e-test-server ruby 1/3] FROM docker.io/library/ruby:2.6.6-alpine3.13@sha256:a92d35609c465172e752fc99ffc94a8acc13d74dbeeec711d1b06158ee66bcea
+#40 sha256:42902c0eb7333415e5bc38f3212eba8e0b1e14466d391bb4aefd8ddc93aadab0
+#40 resolve docker.io/library/ruby:2.6.6-alpine3.13@sha256:a92d35609c465172e752fc99ffc94a8acc13d74dbeeec711d1b06158ee66bcea
+#40 resolve docker.io/library/ruby:2.6.6-alpine3.13@sha256:a92d35609c465172e752fc99ffc94a8acc13d74dbeeec711d1b06158ee66bcea 0.1s done
+#40 DONE 0.1s
+
+#106 [upload-elastic-beanstalk-application-version upload-elastic-beanstalk-application-version 1/5] FROM 012345678901.dkr.ecr.eu-west-1.amazonaws.com/zenploy:1.0.26-aws@sha256:512c30f7b250d27b4a0c906978d2bd41ee9405ef5afd1676bfbac3ca9fe56302
+#106 sha256:ac7a40e26cea1fac43c84a15771fcc20972bef41f0aa77ae4cf7ef2d8df980a2
+#106 resolve 012345678901.dkr.ecr.eu-west-1.amazonaws.com/zenploy:1.0.26-aws@sha256:512c30f7b250d27b4a0c906978d2bd41ee9405ef5afd1676bfbac3ca9fe56302 0.1s done
+#106 DONE 0.1s
+
+#44 [production envoy-preflight 1/1] FROM 012345678901.dkr.ecr.eu-west-1.amazonaws.com/envoy-preflight:62fdf4a226f42b7874bf1d037de9993e7fe1d916@sha256:f40da0089ce5179492e40d2d4e12e42b4727a68740bab1e9028e7e4b942a9ead
+#44 sha256:b4e12c97159cd77a5ebb668057d95e6e4bf38ccb6fb79ea20afe8f60d3cdc3c3
+#44 resolve 012345678901.dkr.ecr.eu-west-1.amazonaws.com/envoy-preflight:62fdf4a226f42b7874bf1d037de9993e7fe1d916@sha256:f40da0089ce5179492e40d2d4e12e42b4727a68740bab1e9028e7e4b942a9ead 0.1s done
+#44 DONE 0.1s
+
+#21 [upload-assets internal] load metadata for docker.io/amazon/aws-cli:2.0.38
+#21 sha256:a8ea630a07ea7a44d889cfd19a5b8964b59d36360282df20f4dbd18aad6303ff
+#21 DONE 0.8s
+
+#62 [upload-assets node 1/4] FROM docker.io/library/node:14.16.0-alpine3.13@sha256:eb2b2be77fbb7515ba116dbf20b55df0523e9d32e0c7b22bb5d625bdd0ad9109
+#62 sha256:e4468d87d522bb9aa275f22adb31b176e64d6b1d9656f3f4b38fd555d7445c05
+#62 resolve docker.io/library/node:14.16.0-alpine3.13@sha256:eb2b2be77fbb7515ba116dbf20b55df0523e9d32e0c7b22bb5d625bdd0ad9109 0.1s done
+#62 CACHED
+
+#131 [apollo-service-push apollo-service-push 1/2] FROM 012345678901.dkr.ecr.eu-west-1.amazonaws.com/apollo-service-push:acaf3bf5b78961b558381c973aa81bbe8a3e8b48@sha256:1f167a293ddf09cd9183a77a720f3b6d1905434c719be477eae61e0693e242f2
+#131 sha256:e47cd75359ad435fa9e9a4a8df9115794339a14e9a96d6a840514440faa7d413
+#131 resolve 012345678901.dkr.ecr.eu-west-1.amazonaws.com/apollo-service-push:acaf3bf5b78961b558381c973aa81bbe8a3e8b48@sha256:1f167a293ddf09cd9183a77a720f3b6d1905434c719be477eae61e0693e242f2 0.1s done
+#131 DONE 0.1s
+
+#63 [upload-assets node 2/4] WORKDIR   /frontend
+#63 sha256:f45b5382068a7c5259054f1957be8711b4611385b04424950ad28c5a6c1639a1
+#63 ...
+
+#197 [upload-assets upload-assets 1/5] FROM docker.io/amazon/aws-cli:2.0.38@sha256:67e7fc5dec6d782cf1a37cbf6da4a7971a9d441646ac04b4a9ffc0af21a60c11
+#197 sha256:ca2a181203b2b332e88d1b624a23ad9e07d84636d51ecd77154eab0fc0d0125c
+#197 resolve docker.io/amazon/aws-cli:2.0.38@sha256:67e7fc5dec6d782cf1a37cbf6da4a7971a9d441646ac04b4a9ffc0af21a60c11 0.1s done
+#197 DONE 0.1s
+
+#63 [apollo-service-push node 2/4] WORKDIR   /frontend
+#63 sha256:f45b5382068a7c5259054f1957be8711b4611385b04424950ad28c5a6c1639a1
+#63 DONE 0.2s
+
+#64 [upload-assets node 3/4] RUN   mv "/opt/yarn-v1.22.5" /opt/yarn
+#64 sha256:2f7d6e5f62f7bb9af9474d5317ff3b983bd579917c7df1bb9699f0d8eaa61547
+#64 DONE 0.6s
+
+#65 [production node 4/4] RUN   ln -sf /opt/yarn/bin/yarn /usr/local/bin/yarn   &&   ln -sf /opt/yarn/bin/yarnpkg /usr/local/bin/yarnpkg
+#65 sha256:49c0b14ad6cc4d329b3467a637493d84dbdf31b61d1a9abbd5030d317cc087d3
+#65 DONE 1.0s
+
+#165 [e2e-test-server internal] load build context
+#165 sha256:6044bdea329d9b01831b676f288bd393996e103d4acf4dad4dec767bcd499505
+#165 transferring context: 3.73MB 1.9s
+#165 ...
+
+#33 [cypress internal] load build context
+#33 sha256:e1303d0344380b994b24142c6b39576bca901a33b93cf95ce664821d68f21d34
+#33 transferring context: 106.76kB 2.1s done
+#33 DONE 2.3s
+
+#36 [cypress cypress 6/8] RUN   yarn cypress verify
+#36 sha256:d1335c39eb700bb1873239255bd556748c6d916302496fe0880d47d0572815ba
+#36 CACHED
+
+#31 [cypress cypress 2/8] WORKDIR   /e2e-tests
+#31 sha256:db05e6468145ab0c7aaf335f35b5765a769d84744230d8ce31e788d04769a710
+#31 CACHED
+
+#34 [cypress cypress 4/8] COPY   e2e-tests/package.json   e2e-tests/yarn.lock   ./
+#34 sha256:ac709f1da6069feb4f6a354f25f651f59ff321c2a643324edcc66452d1c5e6b3
+#34 CACHED
+
+#35 [cypress cypress 5/8] RUN   --mount="type=cache,id=yarn-cypress,target=/usr/local/share/.cache/yarn"   yarn install --frozen-lockfile
+#35 sha256:9c95d50ce897d2bbde3dd22c4d18ca1983bfec9b3e65ab80865594b4e7f3f7a0
+#35 CACHED
+
+#32 [cypress cypress 3/8] RUN   apt-get update   &&   apt-get install --assume-yes     curl     gnupg     xvfb   &&   curl --fail --show-error --silent https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add -   &&   echo 'deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main' >/etc/apt/sources.list.d/google-chrome.list   &&   apt-get update   &&   apt-get install --assume-yes google-chrome-stable   &&   rm -rf /var/lib/apt/lists/*   &&   google-chrome --version
+#32 sha256:474ffb4b1a86fe22956e33b44107c9ac44eccacbbd5459e22182048e5c8ab4e3
+#32 CACHED
+
+#37 [cypress cypress 7/8] COPY   docker/bin/cypress   /usr/local/bin/
+#37 sha256:2654f4880979b2d7eb59f1286382a15fcfcfd5c62cd92e3201056d6df269fe20
+#37 CACHED
+
+#165 [e2e-test-server internal] load build context
+#165 sha256:6044bdea329d9b01831b676f288bd393996e103d4acf4dad4dec767bcd499505
+#165 ...
+
+#38 [cypress cypress 8/8] COPY   e2e-tests/   ./
+#38 sha256:722702104d8fe570630f7590b71d40f1ad8880fd407dda03e49deb601a7971f9
+#38 DONE 0.8s
+
+#165 [e2e-test-server internal] load build context
+#165 sha256:6044bdea329d9b01831b676f288bd393996e103d4acf4dad4dec767bcd499505
+#165 ...
+
+#108 [upload-elastic-beanstalk-application-version internal] load build context
+#108 sha256:a5f48f58b37ebfc437c8c52461d268592e3904f09218dc7abc065a823dbd284a
+#108 transferring context: 13.08MB 6.7s done
+#108 DONE 7.4s
+
+#165 [e2e-test-server internal] load build context
+#165 sha256:6044bdea329d9b01831b676f288bd393996e103d4acf4dad4dec767bcd499505
+#165 transferring context: 46.21MB 8.0s done
+#165 DONE 9.7s
+
+#82 [test internal] load build context
+#82 sha256:4fd79c517b348b4106a521bbc82e929c475d2790a062999e6f18a3fd5744fa9e
+#82 transferring context: 13.66MB 7.3s done
+#82 DONE 9.8s
+
+#90 [test test  2/15] COPY   --from=node   /usr/local/bin/node   /usr/local/bin/
+#90 sha256:ed23c59e84bb4337c79564f1cf79cae867ee17df7cacdc1e28098511af626623
+#90 CACHED
+
+#84 [test ruby-production-dependencies 3/6] COPY   Gemfile   Gemfile.lock   ./
+#84 sha256:4c2c323aa023ae435de2e38a26534e012022340528c31e2e6b9099b945574feb
+#84 CACHED
+
+#41 [test ruby 2/3] WORKDIR   /ocean
+#41 sha256:f8c31909b5318a82df77bd39819dd4aa40fbf7497e0cd8afd5150f508bdc3848
+#41 CACHED
+
+#42 [test ruby 3/3] RUN   set -x   &&   apk --no-cache add     libpq     tzdata   &&   gem update --system "3.2.14"   &&   gem install bundler --version "2.2.14"
+#42 sha256:6b4a9f2629cbfe05bcc066b5d1656fde2377a3ad9cb72576f72e5ad77a51c9cf
+#42 CACHED
+
+#85 [test ruby-production-dependencies 4/6] RUN   bin/check-bundler-lockfile
+#85 sha256:7c246e29548dc12503668687ef7940699244dcba761b0dbcafae9f8bb4542472
+#85 CACHED
+
+#87 [test ruby-production-dependencies 6/6] RUN   rm -r     "/usr/local/bundle/config"     vendor/bundle/ruby/*/cache
+#87 sha256:f96196dd9ba01288350fecd53b02b197152ee5a3545f683bb940a8f8288d05b0
+#87 CACHED
+
+#86 [test ruby-production-dependencies 5/6] RUN   --mount="type=cache,id=bundler,target=/root/.bundle/cache"   --mount="type=secret,id=bundle_config,target=/root/.bundle/config"   bundle install
+#86 sha256:d34c59b96f9aa0ec739e86cc22ceb9e77967ddfb500b8df0eeaa21ae8340204d
+#86 CACHED
+
+#46 [test ruby-production-dependencies 1/6] RUN   apk --no-cache add     build-base     git     openssh-client     postgresql-dev
+#46 sha256:af7147671e600d1d99c8956667a4ec7a73e39b495a28c42729f311c6998435ad
+#46 CACHED
+
+#83 [test ruby-production-dependencies 2/6] COPY   bin/check-bundler-lockfile   bin/
+#83 sha256:a4fff0fd28bf06da67abc29ea517d3370352871f55bea99164689314e7b92e73
+#83 CACHED
+
+#89 [test test  1/15] COPY   --from=node   /opt/yarn/   /opt/yarn/
+#89 sha256:7f33b2c6beb986afe357506a4df4a32590ce8838dc5482100b08a5be05950e6b
+#89 CACHED
+
+#88 [test ruby-development-dependencies 1/1] RUN   --mount="type=cache,id=bundler,target=/root/.bundle/cache"   --mount="type=secret,id=bundle_config,target=/root/.bundle/config"   bundle install
+#88 sha256:49604f9a33336c7c5c3df8b7dfba6fee467804b35f998b7a118723c9e78b1197
+#88 CACHED
+
+#91 [test test  3/15] RUN   ln -sf /opt/yarn/bin/yarn /usr/local/bin/yarn   &&   ln -sf /opt/yarn/bin/yarnpkg /usr/local/bin/yarnpkg
+#91 sha256:f7ecee8ecac0feff02034a11ab9aa9847fd0e233d910cb217a90e84069664606
+#91 CACHED
+
+#126 [upload-elastic-beanstalk-application-version node-dependencies 1/2] COPY   frontend/package.json   frontend/yarn.lock   ./
+#126 sha256:53630d7dccbf936966bb5985ef3d781367e110e472bddd5b836401e48797492d
+#126 DONE 2.2s
+
+#47 [production internal] load build context
+#47 sha256:17fa8e0fcd8e97024be4ef36e3a1442d4bfc78ea846497626774ed21b220888e
+#47 transferring context: 27.26MB 8.1s done
+#47 DONE 9.7s
+
+#199 [upload-assets internal] load build context
+#199 sha256:2c19f2531b2f432a842288af8aa08cd56c8121c2ee2dfeb81eb220dfcdb4a5b4
+#199 transferring context: 13.08MB 8.1s done
+#199 DONE 9.6s
+
+#132 [apollo-service-push internal] load build context
+#132 sha256:0527417afedfaafb68db8fa7f21768f27f9a3d2fde79aa85714a4d99566c4ef4
+#132 transferring context: 13.45MB 7.1s done
+#132 DONE 9.7s
+
+#136 [apollo-service-push ruby-production-dependencies 5/6] RUN   --mount="type=cache,id=bundler,target=/root/.bundle/cache"   --mount="type=secret,id=bundle_config,target=/root/.bundle/config"   bundle install
+#136 sha256:db599a5389946ea914792d996e3b37d9dd1349caa7eba0d423899f3c4edbb932
+#136 CACHED
+
+#135 [apollo-service-push ruby-production-dependencies 4/6] RUN   bin/check-bundler-lockfile
+#135 sha256:3d9e52c931230a87c67e40f7c090ee1032d59f4035e1e93f122306281f724e59
+#135 CACHED
+
+#43 [apollo-service-push production  1/13] RUN   set -x   &&   addgroup --system rails   &&   adduser --system -G rails rails   &&   mkdir tmp   &&   chown rails:rails tmp   &&   mkdir /home/rails/.postgresql   &&   wget     --output-document /home/rails/.postgresql/root.crt     https://s3.amazonaws.com/rds-downloads/rds-ca-2019-root.pem     https://s3.amazonaws.com/rds-downloads/rds-ca-2015-root.pem
+#43 sha256:2b0761041ee7b2cf375e94b30c485f0059c80ad28938aa6875609618dcfd34a5
+#43 CACHED
+
+#133 [apollo-service-push ruby-production-dependencies 2/6] COPY   bin/check-bundler-lockfile   bin/
+#133 sha256:f2fc6fdfba306cd4101bbf0d98aa4625c4766bfb0596640b0ffdb822a3685829
+#133 CACHED
+
+#137 [apollo-service-push ruby-production-dependencies 6/6] RUN   rm -r     "/usr/local/bundle/config"     vendor/bundle/ruby/*/cache
+#137 sha256:49102a3d2f8ac4e4be3c40035680fe1e1dccf4a2d27fe87c4d123d6fe1c701db
+#137 CACHED
+
+#134 [apollo-service-push ruby-production-dependencies 3/6] COPY   Gemfile   Gemfile.lock   ./
+#134 sha256:c164e8af9056bf00fc2f2c85b24d78439b5b70dbcf4d1a8654765c0c68aca43d
+#134 CACHED
+
+#45 [apollo-service-push production  2/13] COPY   --from=envoy-preflight   /usr/local/bin/envoy-preflight   /usr/local/bin/
+#45 sha256:3e251ff7bd199a06a527bb0aad2551485f5073f963b5618af0c5b5219e746f44
+#45 CACHED
+
+#138 [apollo-service-push production  3/13] COPY   --from=ruby-production-dependencies   /ocean/vendor/bundle/   vendor/bundle/
+#138 sha256:fd165c40ad7adaee735b047c1160df45a71f16e075b4b90daf9d99df48a1ad91
+#138 CACHED
+
+#127 [upload-elastic-beanstalk-application-version node-dependencies 2/2] RUN   --mount="type=cache,id=yarn,target=/usr/local/share/.cache/yarn"   --mount="type=secret,id=npmrc,target=/frontend/.npmrc"   yarn install --frozen-lockfile
+#127 sha256:574bcbc05049e0de96569a65b2ad6b39957f0bfea8a77aafbceafe415dce6261
+#127 ...
+
+#117 [upload-elastic-beanstalk-application-version assets 2/9] COPY   app/assets/   app/assets/
+#117 sha256:64e0ec87dace94d851c439cab4f25784fa00ec0b71be7152ab7407daf26fe046
+#117 CACHED
+
+#110 [upload-elastic-beanstalk-application-version ruby-production-dependencies 2/6] COPY   bin/check-bundler-lockfile   bin/
+#110 sha256:a43b4bc67d56ea7e17bdd1144f2c425e9a2913bb2c9f8a41dc5ffe7b3c5c86e5
+#110 CACHED
+
+#122 [upload-elastic-beanstalk-application-version assets 7/9] COPY   vendor/assets/   vendor/assets/
+#122 sha256:9efae5b10be2cd77ca73717f543fe4d061c6e8f2faf95687a84c556c1d01974a
+#122 CACHED
+
+#112 [upload-elastic-beanstalk-application-version ruby-production-dependencies 4/6] RUN   bin/check-bundler-lockfile
+#112 sha256:fbd074a5681c114c233c663601657fcdf161664d4ba1f9012050417ebfcdb33b
+#112 CACHED
+
+#111 [upload-elastic-beanstalk-application-version ruby-production-dependencies 3/6] COPY   Gemfile   Gemfile.lock   ./
+#111 sha256:dfb89c3b96c4e90e5a3dae71b01d3bb101fa30cb987fb2148accc7b8122c2688
+#111 CACHED
+
+#114 [upload-elastic-beanstalk-application-version ruby-production-dependencies 6/6] RUN   rm -r     "/usr/local/bundle/config"     vendor/bundle/ruby/*/cache
+#114 sha256:5207a78338784be06fda503df6d6aae74193739fd1ec3c99dda96aa7297857d0
+#114 CACHED
+
+#120 [upload-elastic-beanstalk-application-version assets 5/9] COPY   config/environments/production.rb   config/environments/
+#120 sha256:6ab8ae719063d8d8624a14e531965288ea5a6db9688f929c952c7ac4265fcdc4
+#120 CACHED
+
+#118 [upload-elastic-beanstalk-application-version assets 3/9] COPY   bin/rails   bin/
+#118 sha256:6f8803b8063be1536e101083880e79a42bee453aa4d59de431d9b78247713725
+#118 CACHED
+
+#121 [upload-elastic-beanstalk-application-version assets 6/9] COPY   lib/best_in_place/   lib/best_in_place/
+#121 sha256:87ced12e8ce9621217c607a26a4e60bfd4d09d0d549becf28f2b5923d0550b01
+#121 CACHED
+
+#119 [upload-elastic-beanstalk-application-version assets 4/9] COPY   config/application.rb   config/boot.rb   config/database.yml   config/environment.rb   config/
+#119 sha256:2e06c9f89541485aed2fe9cfed2e9efaa82844c103992632c4ae413e3068cc94
+#119 CACHED
+
+#113 [upload-elastic-beanstalk-application-version ruby-production-dependencies 5/6] RUN   --mount="type=cache,id=bundler,target=/root/.bundle/cache"   --mount="type=secret,id=bundle_config,target=/root/.bundle/config"   bundle install
+#113 sha256:2d08a4883907a12d8a7b71aaa5bd984e8fbf7c48031a63b0ab9f94a593bc9fe7
+#113 CACHED
+
+#123 [upload-elastic-beanstalk-application-version assets 8/9] COPY   Rakefile   ./
+#123 sha256:09ad8cd23c560c1c2922c77403d2bc16ca9364f2333c7b0b32e8a2b158a86bf7
+#123 CACHED
+
+#116 [upload-elastic-beanstalk-application-version assets 1/9] COPY   --from=node   /usr/local/bin/node   /usr/local/bin/
+#116 sha256:0b999da43e9645f7976d0b568677ad7a2da03e2dbca9c025b7b2d8eb0ca48b1d
+#116 CACHED
+
+#124 [upload-elastic-beanstalk-application-version assets 9/9] RUN   --mount="type=cache,id=assets,target=/ocean/tmp/cache/assets"   bin/rails assets:precompile
+#124 sha256:0c5c47cd412b437e11aa38c78989fc2a7c3b84b2f398c2b1e79306b9b70d8b21
+#124 CACHED
+
+#166 [e2e-test-server ruby-production-dependencies 2/6] COPY   bin/check-bundler-lockfile   bin/
+#166 sha256:5eac47428de5fe492ccacf4241270a4a95c38b673306bae42154f6452245e962
+#166 CACHED
+
+#170 [e2e-test-server ruby-production-dependencies 6/6] RUN   rm -r     "/usr/local/bundle/config"     vendor/bundle/ruby/*/cache
+#170 sha256:b9722f5d0751693448eb72d579d0d88dceef62b91be3551206efdbf93baf622e
+#170 CACHED
+
+#46 [e2e-test-server ruby-production-dependencies 1/6] RUN   apk --no-cache add     build-base     git     openssh-client     postgresql-dev
+#46 sha256:af7147671e600d1d99c8956667a4ec7a73e39b495a28c42729f311c6998435ad
+#46 CACHED
+
+#41 [e2e-test-server ruby 2/3] WORKDIR   /ocean
+#41 sha256:f8c31909b5318a82df77bd39819dd4aa40fbf7497e0cd8afd5150f508bdc3848
+#41 CACHED
+
+#167 [e2e-test-server ruby-production-dependencies 3/6] COPY   Gemfile   Gemfile.lock   ./
+#167 sha256:cbbc61ab864205c16dc1b16b8a4553cf30510ff65cb2c581c7b2460e1ec7d63f
+#167 CACHED
+
+#171 [e2e-test-server ruby-development-dependencies 1/1] RUN   --mount="type=cache,id=bundler,target=/root/.bundle/cache"   --mount="type=secret,id=bundle_config,target=/root/.bundle/config"   bundle install
+#171 sha256:f721b71d088894f2d3739f481a414ae42f0389df080bc1c188b29187a2dcbfc2
+#171 CACHED
+
+#168 [e2e-test-server ruby-production-dependencies 4/6] RUN   bin/check-bundler-lockfile
+#168 sha256:d0f4fcb9e7f3159d1867ba1cf767e2dbd3c391723f6c73bbaaecee9fe39e4c7d
+#168 CACHED
+
+#169 [e2e-test-server ruby-production-dependencies 5/6] RUN   --mount="type=cache,id=bundler,target=/root/.bundle/cache"   --mount="type=secret,id=bundle_config,target=/root/.bundle/config"   bundle install
+#169 sha256:2c554ce9737105cb0927e421f80fe60f5c634eb6ac6c8f164907c298ca4f28b3
+#169 CACHED
+
+#42 [e2e-test-server ruby 3/3] RUN   set -x   &&   apk --no-cache add     libpq     tzdata   &&   gem update --system "3.2.14"   &&   gem install bundler --version "2.2.14"
+#42 sha256:6b4a9f2629cbfe05bcc066b5d1656fde2377a3ad9cb72576f72e5ad77a51c9cf
+#42 CACHED
+
+#115 [upload-elastic-beanstalk-application-version ruby-development-dependencies 1/1] RUN   --mount="type=cache,id=bundler,target=/root/.bundle/cache"   --mount="type=secret,id=bundle_config,target=/root/.bundle/config"   bundle install
+#115 sha256:330928cfdcc9b32c29f71902221a159133c3aef42edd51e1416c6e0a540e9848
+#115 CACHED
+
+#172 [e2e-test-server e2e-test-server  1/12] COPY   app/   app/
+#172 sha256:b64defbaa251af5c5d5cae9ea1b6dba9d7a697f4a68af10d9b45b8da95cfb8ba
+#172 DONE 0.9s
+
+#173 [e2e-test-server e2e-test-server  2/12] COPY   bin/rails   bin/
+#173 sha256:7d1e8f3f5fb064256d6afaf60909e96c2d7a8119503d0e65ea87ab1ade650e6a
+#173 DONE 0.1s
+
+#174 [e2e-test-server e2e-test-server  3/12] COPY   config/   config/
+#174 sha256:58b0cde691e1ef6844a9ca13f9271b7738e86f25231649e88c87a65cfa5ec32a
+#174 DONE 0.1s
+
+#127 [upload-elastic-beanstalk-application-version node-dependencies 2/2] RUN   --mount="type=cache,id=yarn,target=/usr/local/share/.cache/yarn"   --mount="type=secret,id=npmrc,target=/frontend/.npmrc"   yarn install --frozen-lockfile
+#127 sha256:574bcbc05049e0de96569a65b2ad6b39957f0bfea8a77aafbceafe415dce6261
+#127 1.064 yarn install v1.22.5
+#127 ...
+
+#175 [e2e-test-server e2e-test-server  4/12] COPY   db/   db/
+#175 sha256:aa8cbc0d5c499f6caa00180cffd7f1f3a2e935c136d915c90b1fb98bb64ce3bc
+#175 DONE 0.2s
+
+#127 [upload-elastic-beanstalk-application-version node-dependencies 2/2] RUN   --mount="type=cache,id=yarn,target=/usr/local/share/.cache/yarn"   --mount="type=secret,id=npmrc,target=/frontend/.npmrc"   yarn install --frozen-lockfile
+#127 sha256:574bcbc05049e0de96569a65b2ad6b39957f0bfea8a77aafbceafe415dce6261
+#127 1.494 [1/4] Resolving packages...
+#127 ...
+
+#176 [e2e-test-server e2e-test-server  5/12] COPY   lib/   lib/
+#176 sha256:fa4c672a7f0208dfeffcf7259b9cb1406e03a56bd7b6d6620ce0e997f5479bf0
+#176 DONE 0.1s
+
+#177 [e2e-test-server e2e-test-server  6/12] COPY   public/   public/
+#177 sha256:6ed69afd94c6944480f8752304354150f0aa6ae55a55f01e6fe77ce0c6978a22
+#177 DONE 0.2s
+
+#178 [e2e-test-server e2e-test-server  7/12] COPY   spec/factories/   spec/factories/
+#178 sha256:c89db745fd1f273b00760bf0a2197fa7edd69bd1e03b0e6e448518430698227f
+#178 DONE 0.1s
+
+#179 [e2e-test-server e2e-test-server  8/12] COPY   spec/fixtures/   spec/fixtures/
+#179 sha256:f791428b34da38e0bbdd9d3c52954abf56d084737a0c197f9f719363b1c23fc4
+#179 DONE 0.2s
+
+#180 [e2e-test-server e2e-test-server  9/12] COPY   spec/support/test_user.rb   spec/support/
+#180 sha256:b568482656a2bcc99b4de3012d122620fcb46ca0476053941dd9b8eee12dfba0
+#180 DONE 0.1s
+
+#181 [e2e-test-server e2e-test-server 10/12] COPY   config.ru   Gemfile   Gemfile.lock   Rakefile   ./
+#181 sha256:17ef2569b8fe8e3b2919aab84cb94e9454ae23e08cb224d3d1a335afd6896a69
+#181 DONE 0.2s
+
+#185 [e2e-test-server assets 4/9] COPY   config/application.rb   config/boot.rb   config/database.yml   config/environment.rb   config/
+#185 sha256:9721f11b4dcfbc22fd6f694cd0901ce4731f1a0b03b3da28a3a511bf3725e074
+#185 CACHED
+
+#188 [e2e-test-server assets 7/9] COPY   vendor/assets/   vendor/assets/
+#188 sha256:9e563cf3f5faad8ba075423e6a1fdfbdcc85087d964c5fe36c31c435fdd9bf1f
+#188 CACHED
+
+#187 [e2e-test-server assets 6/9] COPY   lib/best_in_place/   lib/best_in_place/
+#187 sha256:75224adfc454a236dd572c07a42460c6818ec8d37c3889663af811974b633c66
+#187 CACHED
+
+#184 [e2e-test-server assets 3/9] COPY   bin/rails   bin/
+#184 sha256:bfb740324470aae3267de4e5980bc005f2a0f2fa0cbcc74527ce196d46297b14
+#184 CACHED
+
+#183 [e2e-test-server assets 2/9] COPY   app/assets/   app/assets/
+#183 sha256:ce236743e82c50e54f72cd6c8e6b698eeea9cd5a49ce277ce730a05946f23ac1
+#183 CACHED
+
+#190 [e2e-test-server assets 9/9] RUN   --mount="type=cache,id=assets,target=/ocean/tmp/cache/assets"   bin/rails assets:precompile
+#190 sha256:dd260d34c6346f582dcc247eb8325e85d07daa0329566fe70b4b3c055123fc84
+#190 CACHED
+
+#186 [e2e-test-server assets 5/9] COPY   config/environments/production.rb   config/environments/
+#186 sha256:f968f8afecf7591310bd135ad82e9db08697d0b323c0692cb20f5dc531af90ae
+#186 CACHED
+
+#182 [e2e-test-server assets 1/9] COPY   --from=node   /usr/local/bin/node   /usr/local/bin/
+#182 sha256:d76eeec760090f6180073b897b18553a6b35269f789d1460f3c322e026cba4e7
+#182 CACHED
+
+#189 [e2e-test-server assets 8/9] COPY   Rakefile   ./
+#189 sha256:a9990d4da2f69f2012920de36c6365cedb3593550462b4dd5a4171c9fd3c6faa
+#189 CACHED
+
+#191 [e2e-test-server e2e-test-server 11/12] COPY   --from=assets   /ocean/public/assets/   public/assets/
+#191 sha256:852f74f85133b8a9da326775a6db8ae01497b5e40fe13e37929c52bdf9190662
+#191 DONE 0.2s
+
+#139 [apollo-service-push production  4/13] COPY   app/   app/
+#139 sha256:40a364b272d198ae9ba0663e02326907b9060886ef9005c9e7878f60060ed8c2
+#139 DONE 3.2s
+
+#222 [cypress] exporting to oci image format
+#222 sha256:69a2560eef4d3ece902c3b5149d142e9bd132f25db0bc9e35b94201534c415d2
+#222 exporting layers
+#222 ...
+
+#140 [apollo-service-push production  5/13] COPY   bin/cronjob   bin/es   bin/rails   bin/rake   bin/sidekiq   bin/
+#140 sha256:57a5fbb3337795a806569af6eadf3643bf8c2109a87a7d5a4d0d2b5bf459b367
+#140 DONE 0.6s
+
+#222 [cypress] exporting to oci image format
+#222 sha256:69a2560eef4d3ece902c3b5149d142e9bd132f25db0bc9e35b94201534c415d2
+#222 ...
+
+#141 [apollo-service-push production  6/13] COPY   config/   config/
+#141 sha256:8816bb81497af4ebd27ed0ca663cad507696df193862ff2cdeec457583adaf13
+#141 DONE 0.1s
+
+#142 [apollo-service-push production  7/13] COPY   db/   db/
+#142 sha256:53fdd449c442baae2a71f8ec31950a7f5d11532a1950d1041798b38c88936da0
+#142 DONE 0.4s
+
+#127 [upload-elastic-beanstalk-application-version node-dependencies 2/2] RUN   --mount="type=cache,id=yarn,target=/usr/local/share/.cache/yarn"   --mount="type=secret,id=npmrc,target=/frontend/.npmrc"   yarn install --frozen-lockfile
+#127 sha256:574bcbc05049e0de96569a65b2ad6b39957f0bfea8a77aafbceafe415dce6261
+#127 ...
+
+#143 [apollo-service-push production  8/13] COPY   lib/   lib/
+#143 sha256:dbf4ba5095459f7af9bd6372436f45c60302d6fe7b68191b95062205b5ac5f10
+#143 DONE 0.1s
+
+#144 [apollo-service-push production  9/13] COPY   public/   public/
+#144 sha256:3fc3f79dbd199b11786bceb5a28dc6883ea888a27faf939c61b2870f85a1db34
+#144 DONE 0.3s
+
+#222 [cypress] exporting to oci image format
+#222 sha256:69a2560eef4d3ece902c3b5149d142e9bd132f25db0bc9e35b94201534c415d2
+#222 ...
+
+#145 [apollo-service-push production 10/13] COPY   config.ru   Gemfile   Gemfile.lock   Rakefile   ./
+#145 sha256:3e41d45e55fd63732c5c42eb409d35e6c6a7ace869a204730eee6fc666a13a6e
+#145 DONE 0.2s
+
+#150 [apollo-service-push assets 4/9] COPY   config/application.rb   config/boot.rb   config/database.yml   config/environment.rb   config/
+#150 sha256:6fb233b605b17b7ce7aeb08fb9e90198d8e812f8a026df66c4fb0b31bb081d42
+#150 CACHED
+
+#153 [apollo-service-push assets 7/9] COPY   vendor/assets/   vendor/assets/
+#153 sha256:eda09240c33f7e99b76eb6c02e35945bd03cc3adbecce82fbc3ef7d8ceeedcd0
+#153 CACHED
+
+#146 [apollo-service-push ruby-development-dependencies 1/1] RUN   --mount="type=cache,id=bundler,target=/root/.bundle/cache"   --mount="type=secret,id=bundle_config,target=/root/.bundle/config"   bundle install
+#146 sha256:91a0fdca9fb8fe848aee2c5fb813b8f3989ec83c803bd2377a271c85a3068f12
+#146 CACHED
+
+#149 [apollo-service-push assets 3/9] COPY   bin/rails   bin/
+#149 sha256:cb0a9ee5a0bfea456daf73bc9e411e342c8949b1073e1060fcce6d67ea0adeba
+#149 CACHED
+
+#155 [apollo-service-push assets 9/9] RUN   --mount="type=cache,id=assets,target=/ocean/tmp/cache/assets"   bin/rails assets:precompile
+#155 sha256:90eb58c6c24825bf4273ce4f31af81421f5035e01d37057439208cac4386b116
+#155 CACHED
+
+#148 [apollo-service-push assets 2/9] COPY   app/assets/   app/assets/
+#148 sha256:4c2f04fc1d7c7c8b774de36a2eb53ddf86f74256cb9230ed49990d7b24de7d31
+#148 CACHED
+
+#151 [apollo-service-push assets 5/9] COPY   config/environments/production.rb   config/environments/
+#151 sha256:6e8533b3eddb8a51eeba2d4370535b5de321e39148769b1c074e81d94e2e5ebb
+#151 CACHED
+
+#147 [apollo-service-push assets 1/9] COPY   --from=node   /usr/local/bin/node   /usr/local/bin/
+#147 sha256:c4cae8eaa485bd4dee8300db97368f8e9fea95f8a5575232d82d07e717352fa4
+#147 CACHED
+
+#152 [apollo-service-push assets 6/9] COPY   lib/best_in_place/   lib/best_in_place/
+#152 sha256:eabc784432eb6ab0712546afe40b95d228c9175203d7542317b1f967d421861d
+#152 CACHED
+
+#154 [apollo-service-push assets 8/9] COPY   Rakefile   ./
+#154 sha256:3b3df1054dfc7030d6fba864eb412c375eb5795f62c30f694ec1cbe5a34387c7
+#154 CACHED
+
+#156 [apollo-service-push production 11/13] COPY   --from=assets   /ocean/public/assets/.sprockets-manifest-*.json   public/assets/
+#156 sha256:2c3dc36c91cee0dad357ef2c3720ef08985d63bef8936077a036d0587faac76f
+#156 DONE 0.1s
+
+#222 [cypress] exporting to oci image format
+#222 sha256:69a2560eef4d3ece902c3b5149d142e9bd132f25db0bc9e35b94201534c415d2
+#222 ...
+
+#127 [upload-elastic-beanstalk-application-version node-dependencies 2/2] RUN   --mount="type=cache,id=yarn,target=/usr/local/share/.cache/yarn"   --mount="type=secret,id=npmrc,target=/frontend/.npmrc"   yarn install --frozen-lockfile
+#127 sha256:574bcbc05049e0de96569a65b2ad6b39957f0bfea8a77aafbceafe415dce6261
+#127 5.164 [2/4] Fetching packages...
+#127 ...
+
+#222 [cypress] exporting to oci image format
+#222 sha256:69a2560eef4d3ece902c3b5149d142e9bd132f25db0bc9e35b94201534c415d2
+#222 exporting layers 22.8s done
+#222 exporting manifest sha256:aa7d5551c7af23bf0663f41fbc2ad2d00b0cadf2553a6e41d9925d412eaf81f7 done
+#222 exporting config sha256:2db0913a4a0ad9f85d929c1c4312d941d886e08e50de48d421976eb4a4e62a3b done
+#222 sending tarball
+#222 ...
+
+#127 [upload-elastic-beanstalk-application-version node-dependencies 2/2] RUN   --mount="type=cache,id=yarn,target=/usr/local/share/.cache/yarn"   --mount="type=secret,id=npmrc,target=/frontend/.npmrc"   yarn install --frozen-lockfile
+#127 sha256:574bcbc05049e0de96569a65b2ad6b39957f0bfea8a77aafbceafe415dce6261
+#127 21.68 info fsevents@2.1.3: The platform "linux" is incompatible with this module.
+#127 21.69 info "fsevents@2.1.3" is an optional dependency and failed compatibility check. Excluding it from installation.
+#127 21.70 info fsevents@2.3.2: The platform "linux" is incompatible with this module.
+#127 21.70 info "fsevents@2.3.2" is an optional dependency and failed compatibility check. Excluding it from installation.
+#127 21.72 info fsevents@1.2.13: The platform "linux" is incompatible with this module.
+#127 21.72 info "fsevents@1.2.13" is an optional dependency and failed compatibility check. Excluding it from installation.
+#127 21.86 [3/4] Linking dependencies...
+#127 22.01 warning "@storybook/builder-webpack5 > webpack-filter-warnings-plugin@1.2.1" has incorrect peer dependency "webpack@^2.0.0 || ^3.0.0 || ^4.0.0".
+#127 22.06 warning "bundle-stats-webpack-plugin > @bundle-stats/cli-utils > @bundle-stats/html-templates > @bundle-stats/ui@2.6.0" has incorrect peer dependency "@bundle-stats/utils@^1.0.0-rc.0".
+#127 22.08 warning " > eslint-config-airbnb@18.2.0" has incorrect peer dependency "eslint-plugin-react@^7.20.0".
+#127 22.08 warning " > eslint-plugin-react@7.19.0" has incorrect peer dependency "eslint@^3.0.0 || ^4.0.0 || ^5.0.0 || ^6.0.0".
+#127 22.23 warning "react-dates > react-with-styles@2.4.0" has unmet peer dependency "react-with-direction@^1.1.0".
+#127 22.24 warning "react-file-viewer > pdfjs-dist > worker-loader@0.8.1" has incorrect peer dependency "webpack@>=0.9 <2 || ^2.1.0-beta || ^2.2.0".
+#127 22.28 warning "webpack-dev-server > webpack-dev-middleware@3.7.2" has incorrect peer dependency "webpack@^4.0.0".
+#127 ...
+
+#223 importing to docker
+#223 sha256:23b4b0eac84c8ae169e6ffbf9b31b0a012698f1a20b2c7f67fb96ae2ac1f4fad
+#223 DONE 0.4s
+
+#127 [upload-elastic-beanstalk-application-version node-dependencies 2/2] RUN   --mount="type=cache,id=yarn,target=/usr/local/share/.cache/yarn"   --mount="type=secret,id=npmrc,target=/frontend/.npmrc"   yarn install --frozen-lockfile
+#127 sha256:574bcbc05049e0de96569a65b2ad6b39957f0bfea8a77aafbceafe415dce6261
+#127 ...
+
+#222 [cypress] exporting to oci image format
+#222 sha256:69a2560eef4d3ece902c3b5149d142e9bd132f25db0bc9e35b94201534c415d2
+#222 sending tarball 18.2s done
+#222 DONE 41.0s
+
+#127 [upload-elastic-beanstalk-application-version node-dependencies 2/2] RUN   --mount="type=cache,id=yarn,target=/usr/local/share/.cache/yarn"   --mount="type=secret,id=npmrc,target=/frontend/.npmrc"   yarn install --frozen-lockfile
+#127 sha256:574bcbc05049e0de96569a65b2ad6b39957f0bfea8a77aafbceafe415dce6261
+#127 268.7 [4/4] Building fresh packages...
+#127 282.3 Done in 281.34s.
+#127 DONE 282.9s
+
+#193 [e2e-test-server node-dependencies 2/2] RUN   --mount="type=cache,id=yarn,target=/usr/local/share/.cache/yarn"   --mount="type=secret,id=npmrc,target=/frontend/.npmrc"   yarn install --frozen-lockfile
+#193 sha256:c55d677df55de341f9d7238929fffdcae5714491c4c2ee8ea78fcbe0525b5721
+#193 CACHED
+
+#192 [e2e-test-server node-dependencies 1/2] COPY   frontend/package.json   frontend/yarn.lock   ./
+#192 sha256:958f623aecfe3eb6a62c9edd3674b0c0eeb45f0133ddde6dd1109523fedb138b
+#192 CACHED
+
+#77 [production node-dependencies 2/2] RUN   --mount="type=cache,id=yarn,target=/usr/local/share/.cache/yarn"   --mount="type=secret,id=npmrc,target=/frontend/.npmrc"   yarn install --frozen-lockfile
+#77 sha256:26c822ff56feb91fd96d4748511f8edc85a3ea01dd1c6d6a4f8af1ea0e899c0e
+#77 CACHED
+
+#76 [production node-dependencies 1/2] COPY   frontend/package.json   frontend/yarn.lock   ./
+#76 sha256:caa59f91eb5c38c5f9d1ea6ff66fecf0e42f1ffb532814cafff45435ede10df7
+#76 CACHED
+
+#218 [upload-assets node-dependencies 2/2] RUN   --mount="type=cache,id=yarn,target=/usr/local/share/.cache/yarn"   --mount="type=secret,id=npmrc,target=/frontend/.npmrc"   yarn install --frozen-lockfile
+#218 sha256:819b7059df1de7be7f1c21520ccf46f960426357ded0fdb724e21478873af21d
+#218 CACHED
+
+#217 [upload-assets node-dependencies 1/2] COPY   frontend/package.json   frontend/yarn.lock   ./
+#217 sha256:87eb91fd87de7e75cad980c5c9947b5088aa83059aab9543be2e66eb1807c0b5
+#217 CACHED
+
+#158 [apollo-service-push node-dependencies 2/2] RUN   --mount="type=cache,id=yarn,target=/usr/local/share/.cache/yarn"   --mount="type=secret,id=npmrc,target=/frontend/.npmrc"   yarn install --frozen-lockfile
+#158 sha256:92878e1ff7937ea03a86e5f2a71285cd677edc70d8c300f364be90b9f22fec0f
+#158 CACHED
+
+#157 [apollo-service-push node-dependencies 1/2] COPY   frontend/package.json   frontend/yarn.lock   ./
+#157 sha256:c4e0732f2ec725fa4aec2b6efa66f822c0ff8e9e471771f6aa0554786d0bb3d6
+#157 CACHED
+
+#219 [upload-assets pack-files 1/1] COPY   frontend/   ./
+#219 sha256:66d23c01830b0a6be2be26629256f61769417a2123bf97b30922a07680758c5c
+#219 DONE 3.6s
+
+#194 [e2e-test-server pack-files 1/1] COPY   frontend/   ./
+#194 sha256:fb23ac1a1155ebdc5d5cf03a5794d86c6528dd795b670db61ba014b4a3ed5449
+#194 DONE 3.6s
+
+#128 [upload-elastic-beanstalk-application-version pack-files 1/1] COPY   frontend/   ./
+#128 sha256:3ac780ac27bf786f24c5f4c7e8cae5579b78a68e3f4b9e2a867e138914010f6b
+#128 DONE 3.6s
+
+#78 [production pack-files 1/1] COPY   frontend/   ./
+#78 sha256:b7212ea8a60859e5a8724088e60b379f087bbd57b52e613106dae319b5707835
+#78 DONE 3.6s
+
+#159 [apollo-service-push pack-files 1/1] COPY   frontend/   ./
+#159 sha256:4792df201003f71367c1fab649a9619e0a10aebb102653c90d697cfd2eb2f362
+#159 DONE 3.6s
+
+#220 [upload-assets packs 1/1] RUN   yarn purgecss --config ./purgecss.config.js   &&   bin/webpack --env name=production
+#220 sha256:293b46ac19ffacb13aea1cc283bda516fb400c03dcafa82518d69036768fab06
+#220 0.854 yarn run v1.22.5
+#220 0.945 $ /frontend/node_modules/.bin/purgecss --config ./purgecss.config.js
+#220 ...
+
+#160 [apollo-service-push packs 1/1] RUN   yarn purgecss --config ./purgecss.config.js   &&   bin/webpack --env name=production
+#160 sha256:ff672e6c1948392c97b0b3989a9bbaf8526eb1868ec4f645982f769039ce7651
+#160 0.828 yarn run v1.22.5
+#160 0.949 $ /frontend/node_modules/.bin/purgecss --config ./purgecss.config.js
+#160 ...
+
+#79 [production packs 1/1] RUN   yarn purgecss --config ./purgecss.config.js   &&   bin/webpack --env name=production
+#79 sha256:c1e0751640d57c82a5bdf8548c58e1fff9956c49b3de5efaf3558433ce892d56
+#79 0.873 yarn run v1.22.5
+#79 0.947 $ /frontend/node_modules/.bin/purgecss --config ./purgecss.config.js
+#79 ...
+
+#195 [e2e-test-server test-packs 1/1] RUN   bin/webpack --env name=test
+#195 sha256:cb90cf6d9413670b76b89507e59884d5716bc2b24c7ee4cb1fe8c73629d46cf4
+#195 ...
+
+#129 [upload-elastic-beanstalk-application-version packs 1/1] RUN   yarn purgecss --config ./purgecss.config.js   &&   bin/webpack --env name=production
+#129 sha256:cfbd4a3e9d360b1fc91b07105f81adcc2d60ab5e80dac93c3d602c4a6b320649
+#129 0.799 yarn run v1.22.5
+#129 0.911 $ /frontend/node_modules/.bin/purgecss --config ./purgecss.config.js
+#129 ...
+
+#79 [production packs 1/1] RUN   yarn purgecss --config ./purgecss.config.js   &&   bin/webpack --env name=production
+#79 sha256:c1e0751640d57c82a5bdf8548c58e1fff9956c49b3de5efaf3558433ce892d56
+#79 11.04 Done in 10.22s.
+#79 ...
+
+#160 [apollo-service-push packs 1/1] RUN   yarn purgecss --config ./purgecss.config.js   &&   bin/webpack --env name=production
+#160 sha256:ff672e6c1948392c97b0b3989a9bbaf8526eb1868ec4f645982f769039ce7651
+#160 11.25 Done in 10.47s.
+#160 ...
+
+#220 [upload-assets packs 1/1] RUN   yarn purgecss --config ./purgecss.config.js   &&   bin/webpack --env name=production
+#220 sha256:293b46ac19ffacb13aea1cc283bda516fb400c03dcafa82518d69036768fab06
+#220 10.90 Done in 10.08s.
+#220 ...
+
+#129 [upload-elastic-beanstalk-application-version packs 1/1] RUN   yarn purgecss --config ./purgecss.config.js   &&   bin/webpack --env name=production
+#129 sha256:cfbd4a3e9d360b1fc91b07105f81adcc2d60ab5e80dac93c3d602c4a6b320649
+#129 11.06 Done in 10.28s.
+#129 ...
+
+#195 [e2e-test-server test-packs 1/1] RUN   bin/webpack --env name=test
+#195 sha256:cb90cf6d9413670b76b89507e59884d5716bc2b24c7ee4cb1fe8c73629d46cf4
+#195 24.38
+#195 24.38   `@babel/polyfill` is deprecated. Please, use required parts of `core-js`
+#195 24.38   and `regenerator-runtime/runtime` separately
+#195 ...
+
+#160 [apollo-service-push packs 1/1] RUN   yarn purgecss --config ./purgecss.config.js   &&   bin/webpack --env name=production
+#160 sha256:ff672e6c1948392c97b0b3989a9bbaf8526eb1868ec4f645982f769039ce7651
+#160 45.99
+#160 45.99   `@babel/polyfill` is deprecated. Please, use required parts of `core-js`
+#160 45.99   and `regenerator-runtime/runtime` separately
+#160 ...
+
+#129 [upload-elastic-beanstalk-application-version packs 1/1] RUN   yarn purgecss --config ./purgecss.config.js   &&   bin/webpack --env name=production
+#129 sha256:cfbd4a3e9d360b1fc91b07105f81adcc2d60ab5e80dac93c3d602c4a6b320649
+#129 47.73
+#129 47.73   `@babel/polyfill` is deprecated. Please, use required parts of `core-js`
+#129 47.73   and `regenerator-runtime/runtime` separately
+#129 ...
+
+#220 [upload-assets packs 1/1] RUN   yarn purgecss --config ./purgecss.config.js   &&   bin/webpack --env name=production
+#220 sha256:293b46ac19ffacb13aea1cc283bda516fb400c03dcafa82518d69036768fab06
+#220 46.17
+#220 46.17   `@babel/polyfill` is deprecated. Please, use required parts of `core-js`
+#220 46.17   and `regenerator-runtime/runtime` separately
+#220 ...
+
+#79 [production packs 1/1] RUN   yarn purgecss --config ./purgecss.config.js   &&   bin/webpack --env name=production
+#79 sha256:c1e0751640d57c82a5bdf8548c58e1fff9956c49b3de5efaf3558433ce892d56
+#79 46.62
+#79 46.62   `@babel/polyfill` is deprecated. Please, use required parts of `core-js`
+#79 46.62   and `regenerator-runtime/runtime` separately
+#79 ...
+
+#93 [test node-dependencies 2/2] RUN   --mount="type=cache,id=yarn,target=/usr/local/share/.cache/yarn"   --mount="type=secret,id=npmrc,target=/frontend/.npmrc"   yarn install --frozen-lockfile
+#93 sha256:00e5c30d0b25962f781ca7a2bac4f4d0b9550575b8f8d4d1e2189e331ee75af8
+#93 CACHED
+
+#92 [test node-dependencies 1/2] COPY   frontend/package.json   frontend/yarn.lock   ./
+#92 sha256:1b34f944f0dc31c3bfc9c7c2064a59573d1ced44a4e10e51a47cab4d8bbfa9e3
+#92 CACHED
+
+#94 [test test  4/15] COPY   --from=node-dependencies   /frontend/node_modules/   frontend/node_modules/
+#94 sha256:6a3256bf66b7e86c8b4ed49e23463a460132aeeb128cb78bd70a99d217c2e439
+#94 DONE 111.7s
+
+#95 [test test  5/15] COPY   app/   app/
+#95 sha256:20a8f298bd40bb862158ba66ace2f1568c0e6d10cf043f94bdfb59ea89a27887
+#95 DONE 4.7s
+
+#96 [test test  6/15] COPY   bin/rails   bin/rubocop   bin/
+#96 sha256:a73090d3f18eae638aac934aa56cec8163c5aff66c2bbd1f34b9ff02b963515c
+#96 DONE 0.1s
+
+#97 [test test  7/15] COPY   config/   config/
+#97 sha256:5e90eb9617246048581a802f2534bd945c914bc7d4a6448c53f306c51ae34a78
+#97 DONE 0.1s
+
+#98 [test test  8/15] COPY   db/   db/
+#98 sha256:134f054520b0229abf5cab3e72538f907d337f716dd5886589d5deaac49b89dd
+#98 DONE 0.3s
+
+#195 [e2e-test-server test-packs 1/1] RUN   bin/webpack --env name=test
+#195 sha256:cb90cf6d9413670b76b89507e59884d5716bc2b24c7ee4cb1fe8c73629d46cf4
+#195 ...
+
+#99 [test test  9/15] COPY   docker/bin/build-storybook   docker/bin/check-database-migrations   docker/bin/check-graphql-types   docker/bin/jest   docker/bin/lint-frontend   docker/bin/rspec   docker/bin/rubocop   /usr/local/bin/
+#99 sha256:656794907fd1d3e5b89fe4b00f0fd283a42797b5642cd968f24b1e09117f5ea9
+#99 DONE 0.2s
+
+#100 [test test 10/15] COPY   e2e-tests/   e2e-tests/
+#100 sha256:92bf6011c3c0156545a50415336829bdc837016b44113a8b7b13603160d500df
+#100 DONE 0.1s
+
+#79 [production packs 1/1] RUN   yarn purgecss --config ./purgecss.config.js   &&   bin/webpack --env name=production
+#79 sha256:c1e0751640d57c82a5bdf8548c58e1fff9956c49b3de5efaf3558433ce892d56
+#79 ...
+
+#101 [test test 11/15] COPY   frontend/   frontend/
+#101 sha256:3dc5f3e96355180806d35bb9431b625b8c4375e89a7fcf9f4353cc309eb4b772
+#101 DONE 2.5s
+
+#102 [test test 12/15] COPY   lib/   lib/
+#102 sha256:90eb8f2e617e1649dd02e2af2123ce1432285f2887410a1da7555bc3d5bcdf83
+#102 DONE 0.2s
+
+#103 [test test 13/15] COPY   public/   public/
+#103 sha256:057c3e04e827999858803be045dba7f7b6bcf6716e32dad59429cfcff76a0be6
+#103 DONE 0.2s
+
+#79 [production packs 1/1] RUN   yarn purgecss --config ./purgecss.config.js   &&   bin/webpack --env name=production
+#79 sha256:c1e0751640d57c82a5bdf8548c58e1fff9956c49b3de5efaf3558433ce892d56
+#79 ...
+
+#104 [test test 14/15] COPY   spec/   spec/
+#104 sha256:42753f1cab70370f0a837f1a085fd25660156300aaea24f0d8f062dc38322a17
+#104 DONE 1.2s
+
+#79 [production packs 1/1] RUN   yarn purgecss --config ./purgecss.config.js   &&   bin/webpack --env name=production
+#79 sha256:c1e0751640d57c82a5bdf8548c58e1fff9956c49b3de5efaf3558433ce892d56
+#79 ...
+
+#105 [test test 15/15] COPY   .rubocop.yml   config.ru   Gemfile   Gemfile.lock   Rakefile   ./
+#105 sha256:562148d33206088583ee62d0fe314b4cd98d6badfc0850c9a289617990d5a6f3
+#105 DONE 0.2s
+
+#222 [test] exporting to oci image format
+#222 sha256:69a2560eef4d3ece902c3b5149d142e9bd132f25db0bc9e35b94201534c415d2
+#222 exporting layers
+#222 ...
+
+#195 [e2e-test-server test-packs 1/1] RUN   bin/webpack --env name=test
+#195 sha256:cb90cf6d9413670b76b89507e59884d5716bc2b24c7ee4cb1fe8c73629d46cf4
+#195 258.8 [BABEL] Note: The code generator has deoptimised the styling of undefined as it exceeds the max of 500KB.
+#195 DONE 342.8s
+
+#79 [production packs 1/1] RUN   yarn purgecss --config ./purgecss.config.js   &&   bin/webpack --env name=production
+#79 sha256:c1e0751640d57c82a5bdf8548c58e1fff9956c49b3de5efaf3558433ce892d56
+#79 ...
+
+#196 [e2e-test-server e2e-test-server 12/12] COPY   --from=test-packs   /frontend/public/packs/   public/packs/
+#196 sha256:9dad4f5146e09675932b3002c198f5dcf09aa48657d5aedac4dce02392cc3d09
+#196 DONE 1.3s
+
+#222 [e2e-test-server] exporting to oci image format
+#222 sha256:69a2560eef4d3ece902c3b5149d142e9bd132f25db0bc9e35b94201534c415d2
+#222 exporting layers
+#222 exporting layers 11.1s done
+#222 sending tarball
+#222 exporting manifest sha256:22e337f28649df0d8a8cd76c8832dc45242e30c632e25eb083ab0c554ebf04f8 0.0s done
+#222 exporting config sha256:523789aa32c3546ba618db02b01ea578a9e0b4e1b591e33663ecec07685cfd7b 0.0s done
+#222 ...
+
+#224 importing to docker
+#224 sha256:90904a599bfc7f3d76fba4021db65791ca1e4864ff4524def401aec7708e18bd
+#224 DONE 5.8s
+
+#79 [production packs 1/1] RUN   yarn purgecss --config ./purgecss.config.js   &&   bin/webpack --env name=production
+#79 sha256:c1e0751640d57c82a5bdf8548c58e1fff9956c49b3de5efaf3558433ce892d56
+#79 ...
+
+#222 [e2e-test-server] exporting to oci image format
+#222 sha256:69a2560eef4d3ece902c3b5149d142e9bd132f25db0bc9e35b94201534c415d2
+#222 sending tarball 19.1s done
+#222 DONE 30.2s
+
+#160 [apollo-service-push packs 1/1] RUN   yarn purgecss --config ./purgecss.config.js   &&   bin/webpack --env name=production
+#160 sha256:ff672e6c1948392c97b0b3989a9bbaf8526eb1868ec4f645982f769039ce7651
+#160 ...
+
+#129 [upload-elastic-beanstalk-application-version packs 1/1] RUN   yarn purgecss --config ./purgecss.config.js   &&   bin/webpack --env name=production
+#129 sha256:cfbd4a3e9d360b1fc91b07105f81adcc2d60ab5e80dac93c3d602c4a6b320649
+#129 398.5 [BABEL] Note: The code generator has deoptimised the styling of undefined as it exceeds the max of 500KB.
+#129 ...
+
+#220 [upload-assets packs 1/1] RUN   yarn purgecss --config ./purgecss.config.js   &&   bin/webpack --env name=production
+#220 sha256:293b46ac19ffacb13aea1cc283bda516fb400c03dcafa82518d69036768fab06
+#220 402.0 [BABEL] Note: The code generator has deoptimised the styling of undefined as it exceeds the max of 500KB.
+#220 ...
+
+#160 [apollo-service-push packs 1/1] RUN   yarn purgecss --config ./purgecss.config.js   &&   bin/webpack --env name=production
+#160 sha256:ff672e6c1948392c97b0b3989a9bbaf8526eb1868ec4f645982f769039ce7651
+#160 409.3 [BABEL] Note: The code generator has deoptimised the styling of undefined as it exceeds the max of 500KB.
+#160 ...
+
+#79 [production packs 1/1] RUN   yarn purgecss --config ./purgecss.config.js   &&   bin/webpack --env name=production
+#79 sha256:c1e0751640d57c82a5bdf8548c58e1fff9956c49b3de5efaf3558433ce892d56
+#79 410.6 [BABEL] Note: The code generator has deoptimised the styling of undefined as it exceeds the max of 500KB.
+#79 ...
+
+#222 [e2e-test-server] exporting to oci image format
+#222 sha256:69a2560eef4d3ece902c3b5149d142e9bd132f25db0bc9e35b94201534c415d2
+#222 exporting layers 268.2s done
+#222 exporting manifest sha256:b99f766cbe852306e2a1d3c41cecce506d5c584053ef5efe1947dda5c4ee7882 0.0s done
+#222 exporting config sha256:940039031c57c2125a00fe47530d46f5bb8b39aa73f72cf4e9ed7237aeb62ad6 done
+#222 DONE 30.2s
+
+#222 [e2e-test-server] exporting to oci image format
+#222 sha256:69a2560eef4d3ece902c3b5149d142e9bd132f25db0bc9e35b94201534c415d2
+#222 sending tarball
+#222 DONE 30.2s
+
+#79 [production packs 1/1] RUN   yarn purgecss --config ./purgecss.config.js   &&   bin/webpack --env name=production
+#79 sha256:c1e0751640d57c82a5bdf8548c58e1fff9956c49b3de5efaf3558433ce892d56
+#79 ...
+
+#225 importing to docker
+#225 sha256:731dd354546214b9ad5bdec223337633ce2454f50e3865cc396b8535e3fbec44
+#225 ...
+
+#79 [production packs 1/1] RUN   yarn purgecss --config ./purgecss.config.js   &&   bin/webpack --env name=production
+#79 sha256:c1e0751640d57c82a5bdf8548c58e1fff9956c49b3de5efaf3558433ce892d56
+#79 ERROR: executor failed running [/bin/sh -c yarn purgecss --config ./purgecss.config.js   &&   bin/webpack --env name=production]: exit code: 137
+
+#222 [test] exporting to oci image format
+#222 sha256:69a2560eef4d3ece902c3b5149d142e9bd132f25db0bc9e35b94201534c415d2
+#222 sending tarball 146.8s done
+#222 CANCELED
+
+#225 importing to docker
+#225 sha256:731dd354546214b9ad5bdec223337633ce2454f50e3865cc396b8535e3fbec44
+#225 CANCELED
+
+#160 [apollo-service-push packs 1/1] RUN   yarn purgecss --config ./purgecss.config.js   &&   bin/webpack --env name=production
+#160 sha256:ff672e6c1948392c97b0b3989a9bbaf8526eb1868ec4f645982f769039ce7651
+------
+ > [production packs 1/1] RUN   yarn purgecss --config ./purgecss.config.js   &&   bin/webpack --env name=production:
+------
+Dockerfile:178
+--------------------
+ 177 |
+ 178 | >>> RUN \
+ 179 | >>>   yarn purgecss --config ./purgecss.config.js \
+ 180 | >>>   && \
+ 181 | >>>   bin/webpack --env name=production
+ 182 |
+--------------------
+error: failed to solve: rpc error: code = Unknown desc = executor failed running [/bin/sh -c yarn purgecss --config ./purgecss.config.js   &&   bin/webpack --env name=production]: exit code: 137

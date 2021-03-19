@@ -1,0 +1,601 @@
+# syntax=docker/dockerfile:1.2
+
+ARG \
+  ALPINE_VERSION="3.13"
+
+ARG \
+  DEBIAN_VERSION="buster-slim"
+
+ARG \
+  NODE_VERSION
+
+ARG \
+  RUBY_VERSION
+
+FROM ruby:${RUBY_VERSION}-alpine${ALPINE_VERSION} AS ruby
+
+WORKDIR \
+  /ocean
+
+ENV \
+  BUNDLE_FROZEN="true" \
+  BUNDLE_GLOBAL_GEM_CACHE="true" \
+  BUNDLE_JOBS="4" \
+  BUNDLE_PATH="vendor/bundle" \
+  BUNDLE_RETRY="3" \
+  BUNDLE_WITHOUT="development:test"
+
+ARG \
+  BUNDLER_VERSION
+
+ARG \
+  RUBYGEMS_VERSION="3.2.14"
+
+RUN \
+  set -x \
+  && \
+  apk --no-cache add \
+    libpq \
+    tzdata \
+  && \
+  gem update --system "${RUBYGEMS_VERSION}" \
+  && \
+  gem install bundler --version "${BUNDLER_VERSION}"
+
+
+FROM 012345678901.dkr.ecr.eu-west-1.amazonaws.com/envoy-preflight:62fdf4a226f42b7874bf1d037de9993e7fe1d916 AS envoy-preflight
+
+
+FROM ruby AS ruby-production-dependencies
+
+ENV \
+  BUNDLE_IGNORE_MESSAGES="true"
+
+RUN \
+  apk --no-cache add \
+    build-base \
+    git \
+    openssh-client \
+    postgresql-dev
+
+COPY \
+  bin/check-bundler-lockfile \
+  bin/
+
+COPY \
+  Gemfile \
+  Gemfile.lock \
+  ./
+
+RUN \
+  bin/check-bundler-lockfile
+
+RUN \
+  --mount="type=cache,id=bundler,target=/root/.bundle/cache" \
+  --mount="type=secret,id=bundle_config,target=/root/.bundle/config" \
+  bundle install
+
+RUN \
+  rm -r \
+    "${BUNDLE_APP_CONFIG}/config" \
+    vendor/bundle/ruby/*/cache
+
+
+FROM ruby-production-dependencies AS ruby-development-dependencies
+
+ENV \
+  BUNDLE_WITHOUT=""
+
+RUN \
+  --mount="type=cache,id=bundler,target=/root/.bundle/cache" \
+  --mount="type=secret,id=bundle_config,target=/root/.bundle/config" \
+  bundle install
+
+
+FROM node:${NODE_VERSION}-alpine${ALPINE_VERSION} AS node
+
+WORKDIR \
+  /ocean
+
+RUN \
+  mv "/opt/yarn-v${YARN_VERSION}" /opt/yarn
+
+RUN \
+  ln -sf /opt/yarn/bin/yarn /usr/local/bin/yarn \
+  && \
+  ln -sf /opt/yarn/bin/yarnpkg /usr/local/bin/yarnpkg
+
+
+FROM ruby-development-dependencies AS assets
+
+COPY \
+  --from=node \
+  /usr/local/bin/node \
+  /usr/local/bin/
+
+COPY \
+  app/assets/ \
+  app/assets/
+
+COPY \
+  bin/rails \
+  bin/
+
+COPY \
+  config/application.rb \
+  config/boot.rb \
+  config/database.yml \
+  config/environment.rb \
+  config/
+
+COPY \
+  config/environments/production.rb \
+  config/environments/
+
+COPY \
+  lib/best_in_place/ \
+  lib/best_in_place/
+
+COPY \
+  vendor/assets/ \
+  vendor/assets/
+
+COPY \
+  Rakefile \
+  ./
+
+ENV \
+  RAILS_ENV="production" \
+  SECRET_KEY_BASE="none"
+
+RUN \
+  --mount="type=cache,id=assets,target=/ocean/tmp/cache/assets" \
+  bin/rails assets:precompile
+
+
+FROM node AS node-dependencies
+
+COPY \
+  package.json \
+  yarn.lock \
+  ./
+
+RUN \
+  --mount="type=cache,id=yarn,target=/usr/local/share/.cache/yarn" \
+  --mount="type=secret,id=npmrc,target=/ocean/.npmrc" \
+  yarn install --frozen-lockfile
+
+
+FROM node-dependencies AS pack-files
+
+COPY \
+  bin/webpack \
+  bin/
+
+COPY \
+  frontend/ \
+  frontend/
+
+COPY \
+  webpack/ \
+  webpack/
+
+COPY \
+  babel.config.js \
+  purgecss.config.js \
+  tsconfig.json \
+  tsconfig.webpack.json \
+  webpack.config.ts \
+  ./
+
+
+FROM pack-files AS packs
+
+RUN \
+  yarn purgecss --config ./purgecss.config.js \
+  && \
+  bin/webpack --env name=production
+
+
+FROM ruby AS production
+
+RUN \
+  set -x \
+  && \
+  addgroup --system rails \
+  && \
+  adduser --system -G rails rails \
+  && \
+  mkdir tmp \
+  && \
+  chown rails:rails tmp \
+  && \
+  mkdir /home/rails/.postgresql \
+  && \
+  wget \
+    --output-document /home/rails/.postgresql/root.crt \
+    https://s3.amazonaws.com/rds-downloads/rds-ca-2019-root.pem \
+    https://s3.amazonaws.com/rds-downloads/rds-ca-2015-root.pem
+
+COPY \
+  --from=envoy-preflight \
+  /usr/local/bin/envoy-preflight \
+  /usr/local/bin/
+
+COPY \
+  --from=ruby-production-dependencies \
+  /ocean/vendor/bundle/ \
+  vendor/bundle/
+
+COPY \
+  app/ \
+  app/
+
+COPY \
+  bin/cronjob \
+  bin/es \
+  bin/rails \
+  bin/rake \
+  bin/sidekiq \
+  bin/
+
+COPY \
+  config/ \
+  config/
+
+COPY \
+  db/ \
+  db/
+
+COPY \
+  lib/ \
+  lib/
+
+COPY \
+  public/ \
+  public/
+
+COPY \
+  config.ru \
+  Gemfile \
+  Gemfile.lock \
+  Rakefile \
+  ./
+
+COPY \
+  --from=assets \
+  /ocean/public/assets/.sprockets-manifest-*.json \
+  public/assets/
+
+COPY \
+  --from=packs \
+  /ocean/public/packs/manifest.json \
+  public/packs/
+
+USER \
+  rails
+
+EXPOSE \
+  3000
+
+ENV \
+  RACK_ENV="production" \
+  RAILS_ENV="production"
+
+RUN \
+  AWS_ACCESS_KEY_ID="none" \
+  AWS_SECRET_ACCESS_KEY="none" \
+  DATABASE_URL="none" \
+  NEW_RELIC_AGENT_ENABLED="false" \
+  SECRET_KEY_BASE="none" \
+  bin/rails runner "puts 'Warmed bootsnap cache!'"
+
+ARG \
+  APPLICATION_VERSION
+
+ENV \
+  APPLICATION_VERSION="${APPLICATION_VERSION}"
+
+CMD \
+  ["bin/rails", "server"]
+
+
+FROM production AS graphql-schema
+
+RUN \
+  DATABASE_URL="none" \
+  NEW_RELIC_AGENT_ENABLED="false" \
+  SECRET_KEY_BASE="none" \
+  bin/rails graphql:dump_schema_files
+
+
+FROM 012345678901.dkr.ecr.eu-west-1.amazonaws.com/apollo-service-push:acaf3bf5b78961b558381c973aa81bbe8a3e8b48 AS apollo-service-push
+
+ENV \
+  APOLLO_SERVICE_NAME="ocean"
+
+COPY \
+  --from=graphql-schema \
+  /ocean/tmp/schema_private.graphql \
+  /ocean/tmp/schema_public.graphql \
+  ./
+
+
+FROM pack-files AS test-packs
+
+RUN \
+  bin/webpack --env name=test
+
+
+FROM ruby-development-dependencies AS e2e-test-server
+
+COPY \
+  app/ \
+  app/
+
+COPY \
+  bin/rails \
+  bin/
+
+COPY \
+  config/ \
+  config/
+
+COPY \
+  db/ \
+  db/
+
+COPY \
+  lib/ \
+  lib/
+
+COPY \
+  public/ \
+  public/
+
+COPY \
+  spec/factories/ \
+  spec/factories/
+
+COPY \
+  spec/fixtures/ \
+  spec/fixtures/
+
+COPY \
+  spec/support/test_user.rb \
+  spec/support/
+
+COPY \
+  config.ru \
+  Gemfile \
+  Gemfile.lock \
+  Rakefile \
+  ./
+
+COPY \
+  --from=assets \
+  /ocean/public/assets/ \
+  public/assets/
+
+COPY \
+  --from=test-packs \
+  /ocean/public/packs/ \
+  public/packs/
+
+ENV \
+  AWS_ACCESS_KEY_ID="AKIAIOSFODNN7EXAMPLE" \
+  AWS_REGION="eu-west-1" \
+  AWS_SECRET_ACCESS_KEY="wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY" \
+  MAIL_FROM="zencargo@example.com" \
+  RAILS_ENV="test"
+
+
+FROM node:${NODE_VERSION}-${DEBIAN_VERSION} AS cypress
+
+WORKDIR \
+  /e2e-tests
+
+RUN \
+  apt-get update \
+  && \
+  apt-get install --assume-yes \
+    curl \
+    gnupg \
+    xvfb \
+  && \
+  curl --fail --show-error --silent https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add - \
+  && \
+  echo 'deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main' >/etc/apt/sources.list.d/google-chrome.list \
+  && \
+  apt-get update \
+  && \
+  apt-get install --assume-yes google-chrome-stable \
+  && \
+  rm -rf /var/lib/apt/lists/* \
+  && \
+  google-chrome --version
+
+COPY \
+  e2e-tests/package.json \
+  e2e-tests/yarn.lock \
+  ./
+
+RUN \
+  --mount="type=cache,id=yarn-cypress,target=/usr/local/share/.cache/yarn" \
+  yarn install --frozen-lockfile
+
+RUN \
+  yarn cypress verify
+
+COPY \
+  docker/bin/cypress \
+  /usr/local/bin/
+
+COPY \
+  e2e-tests/ \
+  ./
+
+ENV \
+  FORCE_COLOR="true"
+
+ENTRYPOINT \
+  ["cypress"]
+
+
+FROM 012345678901.dkr.ecr.eu-west-1.amazonaws.com/zenploy:1.0.26-aws AS upload-elastic-beanstalk-application-version
+
+WORKDIR \
+  /ocean
+
+ARG \
+  APPLICATION_VERSION
+
+ARG \
+  BUNDLER_VERSION
+
+ENV \
+  APPLICATION_VERSION="${APPLICATION_VERSION}" \
+  BUNDLER_VERSION="${BUNDLER_VERSION}"
+
+COPY \
+  docker/bin/upload-elastic-beanstalk-application-version \
+  /usr/local/bin/
+
+COPY \
+  --from=assets \
+  /ocean/public/assets/ \
+  /ocean-public/assets/
+
+COPY \
+  --from=packs /ocean/public/packs/ /ocean-public/packs/
+
+ENTRYPOINT \
+  ["upload-elastic-beanstalk-application-version"]
+
+
+FROM amazon/aws-cli:2.0.38 AS upload-assets
+
+WORKDIR \
+  /ocean
+
+COPY \
+  docker/bin/upload-assets \
+  /usr/local/bin/
+
+COPY \
+  --from=assets \
+  /ocean/public/assets/ \
+  public/assets/
+
+COPY \
+  --from=packs \
+  /ocean/public/packs/ \
+  public/packs/
+
+ENTRYPOINT \
+  ["upload-assets"]
+
+
+FROM ruby-development-dependencies AS test
+
+COPY \
+  --from=node \
+  /opt/yarn/ \
+  /opt/yarn/
+
+COPY \
+  --from=node \
+  /usr/local/bin/node \
+  /usr/local/bin/
+
+RUN \
+  ln -sf /opt/yarn/bin/yarn /usr/local/bin/yarn \
+  && \
+  ln -sf /opt/yarn/bin/yarnpkg /usr/local/bin/yarnpkg
+
+COPY \
+  --from=node-dependencies \
+  /ocean/node_modules/ \
+  node_modules/
+
+COPY \
+  .storybook/ \
+  .storybook/
+
+COPY \
+  app/ \
+  app/
+
+COPY \
+  bin/rails \
+  bin/rubocop \
+  bin/
+
+COPY \
+  config/ \
+  config/
+
+COPY \
+  webpack/ \
+  webpack/
+
+COPY \
+  db/ \
+  db/
+
+COPY \
+  docker/bin/build-storybook \
+  docker/bin/check-database-migrations \
+  docker/bin/check-graphql-types \
+  docker/bin/jest \
+  docker/bin/lint-frontend \
+  docker/bin/rspec \
+  docker/bin/rubocop \
+  /usr/local/bin/
+
+COPY \
+  e2e-tests/ \
+  e2e-tests/
+
+COPY \
+  frontend/ \
+  frontend/
+
+COPY \
+  lib/ \
+  lib/
+
+COPY \
+  public/ \
+  public/
+
+COPY \
+  spec/ \
+  spec/
+
+COPY \
+  .eslintignore \
+  .eslintrc \
+  .prettierrc \
+  .rubocop.yml \
+  .stylelintrc \
+  babel.config.js \
+  config.ru \
+  Gemfile \
+  Gemfile.lock \
+  graphql-codegen.config.yml \
+  jest.config.js \
+  package.json \
+  Rakefile \
+  tsconfig.json \
+  tsconfig.test.json \
+  ./
+
+ENV \
+  AWS_ACCESS_KEY_ID="AKIAIOSFODNN7EXAMPLE" \
+  AWS_REGION="eu-west-1" \
+  AWS_SECRET_ACCESS_KEY="wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY" \
+  CI="true" \
+  FORCE_COLOR="true" \
+  MAIL_FROM="zencargo@example.com" \
+  RAILS_ENV="test"
